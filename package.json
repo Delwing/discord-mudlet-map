@@ -1,0 +1,15 @@
+{
+  "name": "discord-mudlet-map",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0"
+  },
+  "dependencies": {
+    "mudlet-map-binary-reader": "^0.0.2",
+    "mudlet-map-renderer": "^0.0.1",
+    "sharp": "^0.29.1"
+  }
+}
