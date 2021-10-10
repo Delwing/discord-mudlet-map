@@ -3,6 +3,20 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "keywords": [
+    "mudlet",
+    "map",
+    "mud",
+    "discord"
+  ],
+  "author": "Delwing",
+  "repository": {
+    "url": "git+https://github.com/Delwing/discord-mudlet-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Delwing/discord-mudlet-map/issues"
+  },
+  "homepage": "https://github.com/Delwing/discord-mudlet-map#readme",
   "dependencies": {
     "mudlet-map-binary-reader": "^0.0.2",
     "mudlet-map-renderer": "^0.0.1",
