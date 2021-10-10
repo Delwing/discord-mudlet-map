@@ -1,5 +1,5 @@
 const { Client, version } = require("discord.js");
-const mapCommand = require("./events/map-command");
+const mapCommand = require("../events/messageCreate");
 
 const major = parseInt(version.substring(0, version.indexOf(".")));
 const eventName = major >= 13 ? "messageCreate" : "message";
@@ -13,4 +13,8 @@ module.exports = (client, config) => {
     eventName,
     mapCommand(config)
   );
+
+  client.on('ready', () => {
+    console.log("Bot enhanced with Mudlet maps ready.")
+  })
 };

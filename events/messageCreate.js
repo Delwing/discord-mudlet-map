@@ -1,5 +1,5 @@
-const { Message, Client, MessageAttachment } = require("discord.js");
-const MapResolver = require("../maps/map-resolver");
+const { Message, Client } = require("discord.js");
+const MapResolver = require("../maps/prepare-map");
 const { Renderer } = require("mudlet-map-renderer");
 const sharp = require("sharp");
 
@@ -29,6 +29,7 @@ module.exports = (config) => {
         let reader = element.reader;
         if (!reader) {
             message.channel.send(`${key} - map not ready`);  
+            return;
         }
         let area = reader.getAreaByRoomId(roomId);
         if (!area) {
@@ -42,7 +43,9 @@ module.exports = (config) => {
             .png()
             .toBuffer()
             .then((buffer) => {
-              message.channel.send(`${key} - ${area.areaName}`, new MessageAttachment(buffer, `${key} - ${roomId}.png`));
+              message.channel.send({content: `${key} - ${area.areaName}`, files:[
+                { attachment: buffer, name: `${key} - ${roomId}.png` }
+              ]})
             })
             .catch(function (err) {
               console.log(err);

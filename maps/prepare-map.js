@@ -23,7 +23,7 @@ function ensureDirectoryExists(key) {
   });
 }
 
-function prepareMap(key, provider) {
+async function prepareMap(key, provider) {
   return ensureDirectoryExists(`./${downloadDir}/${key}`)
     .then(() => provider(fs.createWriteStream(`./${downloadDir}/${key}/map.dat`)))
     .then(
@@ -31,8 +31,8 @@ function prepareMap(key, provider) {
         new Promise((resolve, reject) => {
           let map = MudletMapReader.read(`./${downloadDir}/${key}/map.dat`);
           MudletMapReader.export(map, `./${downloadDir}/${key}/`);
-          let mapData = require(`../${downloadDir}/${key}/mapExport.json`);
-          let mapColors = require(`../${downloadDir}/${key}/colors.json`);
+          let mapData = JSON.parse(fs.readFileSync(`./${downloadDir}/${key}/mapExport.json`));
+          let mapColors = JSON.parse(fs.readFileSync(`./${downloadDir}/${key}/colors.json`));
           let reader = new MapReader(mapData, mapColors);
           resolve(reader);
         })

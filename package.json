@@ -3,13 +3,17 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
-  "devDependencies": {
-    "discord.js": "^12.5.3",
-    "dotenv": "^10.0.0"
-  },
   "dependencies": {
     "mudlet-map-binary-reader": "^0.0.2",
     "mudlet-map-renderer": "^0.0.1",
     "sharp": "^0.29.1"
+  },
+  "peerDependencies": {
+    "discord.js": ">12"
+  },
+  "exports": "./exports.js",
+  "devDependencies": {
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
   }
 }
