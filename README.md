@@ -8,7 +8,7 @@ This little library helps with Discord bot configuration to provide small Mudlet
 const BOT_TOKEN = "your_token"
 
 const Discord = require("discord.js");
-const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILD_MESSAGES] });
+const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILD_MESSAGES, Discord.Intents.FLAGS.GUILDS] });
 
 const { configure, MapProviders, LocationResolvers } = require("discord-mudlet-map")
 
