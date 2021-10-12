@@ -13,7 +13,7 @@ const client = new Discord.Client({ intents: [Discord.Intents.FLAGS.GUILD_MESSAG
 const { configure, MapProviders, LocationResolvers } = require("discord-mudlet-map")
 
 let config = {
-  Achea: { locationExtractor: LocationResolvers.plainRegexp("!achaea (\\d+)"), provider: MapProviders.retryingDownloader("https://raw.githubusercontent.com/IRE-Mudlet-Mapping/AchaeaCrowdmap/gh-pages/Map/map", { retries: 5, delay : 10000 }) },
+  Achaea: { locationExtractor: LocationResolvers.plainRegexp("!achaea (\\d+)"), provider: MapProviders.retryingDownloader("https://raw.githubusercontent.com/IRE-Mudlet-Mapping/AchaeaCrowdmap/gh-pages/Map/map", { retries: 5, delay : 10000 }) },
 };
 
 configure(client, config);
