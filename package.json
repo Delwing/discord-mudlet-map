@@ -1,6 +1,6 @@
 {
   "name": "discord-mudlet-map",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Delwing/discord-mudlet-map#readme",
   "dependencies": {
-    "mudlet-map-binary-reader": "^0.0.2",
+    "mudlet-map-binary-reader": "^0.0.3",
     "mudlet-map-renderer": "^0.0.2",
     "sharp": "^0.29.1"
   },
