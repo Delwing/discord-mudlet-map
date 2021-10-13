@@ -27,7 +27,7 @@ let retryingDownloader = (url, retryOptions) => (writeStream) => {
       return new Promise((resolve, reject) =>
         setTimeout(() => {
             options.retries--;
-            console.log("RETRY")
+            console.log(`Retrying download from ${url}`)
           resolve(retryingDownloader(url, options)(writeStream));
         }, options.delay)
       );

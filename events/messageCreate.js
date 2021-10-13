@@ -3,9 +3,6 @@ const MapResolver = require("../maps/prepare-map");
 const { Renderer } = require("mudlet-map-renderer");
 const sharp = require("sharp");
 
-const scale = 40;
-let settings = { scale: scale };
-
 /**
  *
  * @param {Client} client
@@ -37,7 +34,7 @@ module.exports = (config) => {
           return;
         }
         async function render() {
-          let renderer = new Renderer(null, reader, area, reader.getColors(), settings);
+          let renderer = new Renderer(null, reader, area, reader.getColors(), element.settings);
           renderer.renderPosition(roomId);
           sharp(Buffer.from(renderer.exportSvg(roomId, 10)))
             .png()
