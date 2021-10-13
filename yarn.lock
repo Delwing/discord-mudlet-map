@@ -577,17 +577,17 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-mudlet-map-binary-reader@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/mudlet-map-binary-reader/-/mudlet-map-binary-reader-0.0.2.tgz#5c924f28c5672bbcf75e38c7409333668d5a4ac6"
-  integrity sha512-iYqGLPUbQo9LtIJ1g+QKCaso2kn1myikBkgY61WyQFOi1JdI4JiNOjkAnaccbBbLybvh2m6nvSQbA99b+hI1Ag==
+mudlet-map-binary-reader@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/mudlet-map-binary-reader/-/mudlet-map-binary-reader-0.0.3.tgz#b8b9c9c8c4ae14b7c9518e56557ed14d79332e74"
+  integrity sha512-9RwhLx9b8j+W5k4PbNi4xrwS5AMF6vY3Ww52ZxGpN1tTWozJ8BXz84ru+PTVC0SeuuwrbygODNLOodfW6B/M2Q==
   dependencies:
     qtdatastream "^1.1.0"
 
-mudlet-map-renderer@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/mudlet-map-renderer/-/mudlet-map-renderer-0.0.1.tgz#b2ac91525a96c756eb89a812d415a58a4996f7ee"
-  integrity sha512-SAXMUn6hHn9Nyq/tRT9kiM68cHSg/W8NydDDRMecSQ2oK+tnztQv9Ub0qz2/L8/5tmrcfk6GBuUnuhHCFqDx9A==
+mudlet-map-renderer@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/mudlet-map-renderer/-/mudlet-map-renderer-0.0.2.tgz#a61a98374e2a2931c686e615d8c05fceea38461f"
+  integrity sha512-7vrXlvEYW7oGhtWfSUGDzhRbBe9fMzh4db0AWfQfgSpty34G7B/peRVUaLC/ucH25EBZKX6L74m5l0nToP04Hg==
   dependencies:
     paper-jsdom "^0.12.15"
 
