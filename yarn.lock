@@ -533,7 +533,7 @@ lodash.isequal@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
   integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
 
-lodash@^4.7.0:
+lodash@^4.17.21, lodash@^4.7.0:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -577,17 +577,18 @@ ms@2.1.2:
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz#d09d1f357b443f493382a8eb3ccd183872ae6009"
   integrity sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
 
-mudlet-map-binary-reader@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/mudlet-map-binary-reader/-/mudlet-map-binary-reader-0.0.3.tgz#b8b9c9c8c4ae14b7c9518e56557ed14d79332e74"
-  integrity sha512-9RwhLx9b8j+W5k4PbNi4xrwS5AMF6vY3Ww52ZxGpN1tTWozJ8BXz84ru+PTVC0SeuuwrbygODNLOodfW6B/M2Q==
+mudlet-map-binary-reader@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/mudlet-map-binary-reader/-/mudlet-map-binary-reader-0.0.4.tgz#d100677495b4387c000d2b1bce4cb7b4a93cda1f"
+  integrity sha512-JvWeky525XaMhXZcXPXrOUrJZ9pIkOcFZkZ8/ENHbxTALas8IlWuv8B/ZEqHet0tsyOvdByVodHqAyGThH/Zqw==
   dependencies:
+    lodash "^4.17.21"
     qtdatastream "^1.1.0"
 
-mudlet-map-renderer@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/mudlet-map-renderer/-/mudlet-map-renderer-0.0.2.tgz#a61a98374e2a2931c686e615d8c05fceea38461f"
-  integrity sha512-7vrXlvEYW7oGhtWfSUGDzhRbBe9fMzh4db0AWfQfgSpty34G7B/peRVUaLC/ucH25EBZKX6L74m5l0nToP04Hg==
+mudlet-map-renderer@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/mudlet-map-renderer/-/mudlet-map-renderer-0.0.5.tgz#abd6fd4c4f244da9b6f2868358646b5ef4bd622c"
+  integrity sha512-6OsTGyl3Dxdwcx6Qwobfi8p5fbeogQOhCTOXuAfmiKiF5mSXfR7bQ3sZu2spiuQCrxP0HZUuAv0rTsC1HQKzwA==
   dependencies:
     paper-jsdom "^0.12.15"
 

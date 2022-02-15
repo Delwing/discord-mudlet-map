@@ -1,3 +1,5 @@
+# 0.0.5
+- Use limitting function for generating area image
 # 0.0.4
 - Update dependencies
 # 0.0.3

@@ -16,6 +16,7 @@ let config = {
   Achaea: { 
     locationExtractor: LocationResolvers.plainRegexp("!achaea (\\d+)"),
     provider: MapProviders.retryingDownloader("https://raw.githubusercontent.com/IRE-Mudlet-Mapping/AchaeaCrowdmap/gh-pages/Map/map", { retries: 5, delay : 10000 }) },
+    renderFragment: true, // renders just area around location, should improve generation times for bigger areas
     settings: {
       isRound: true
     } // Reffer to: https://github.com/Delwing/js-mudlet-map-renderer#settings-and-their-default-values
