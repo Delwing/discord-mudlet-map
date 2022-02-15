@@ -1,3 +1,5 @@
+# 0.0.6
+- remove deubg messages
 # 0.0.5
 - Use limitting function for generating area image
 # 0.0.4

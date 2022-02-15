@@ -31,15 +31,12 @@ module.exports = (config) => {
         let area = reader.getAreaByRoomId(roomId);
         if (element.renderFragment) {
             area = area.limit(roomId, 15)
-            console.log(element.settings)
             if (element.settings == undefined) {
                 element.settings = {}
             }
-            console.log(element.settings)
             if (element.settings.areaName == undefined) {
                 element.settings.areaName = false;
             }
-            console.log(element.settings)
         }
         if (!area) {
           message.channel.send(`${key} - no location ID`);
