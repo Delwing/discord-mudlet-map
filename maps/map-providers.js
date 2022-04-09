@@ -7,7 +7,10 @@ let downloader = (url) => (writeStream) => {
     protocol.get(url, function (response) {
       if (response.statusCode < 400) {
         response.pipe(writeStream);
-        response.on("end", () => resolve());
+        writeStream.on("finish", () => {
+            writeStream.close()
+            resolve()
+        })
         response.on("error", (err) => reject(err));
       } else {
         reject(new Error(`Can't download map: ${response.statusCode} ${response.statusMessage}`));

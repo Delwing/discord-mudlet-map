@@ -1,5 +1,4 @@
 const { Message, Client } = require("discord.js");
-const MapResolver = require("../maps/prepare-map");
 const { Renderer } = require("mudlet-map-renderer");
 const sharp = require("sharp");
 
@@ -9,16 +8,7 @@ const sharp = require("sharp");
  * @param {Message} message
  */
 module.exports = (config) => {
-  Object.keys(config).map(async (key) => {
-    MapResolver.prepareMap(key, config[key].provider)
-      .then((reader) => {
-        config[key].reader = reader;
-        console.log(`${key} map ready!`);
-      })
-      .catch((err) => console.log(err));
-  });
-
-  return async (message) => {
+    return async (message) => {
     Object.keys(config).forEach((key) => {
       let element = config[key];
       let roomId = element.locationExtractor(message.content);
