@@ -20,7 +20,7 @@
   "dependencies": {
     "mudlet-map-binary-reader": "^0.1.2",
     "mudlet-map-renderer": "^0.0.5",
-    "sharp": "^0.30.3"
+    "sharp": "^0.30.5"
   },
   "peerDependencies": {
     "discord.js": ">12"
