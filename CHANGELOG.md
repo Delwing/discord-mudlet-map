@@ -1,3 +1,6 @@
+# 0.1.2
+- fix hash search
+
 # 0.1.1
 - fix dependency
 

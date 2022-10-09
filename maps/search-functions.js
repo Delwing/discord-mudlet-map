@@ -7,7 +7,7 @@ let hashOrIdSearch = (matches, reader) => {
         if (!hashCache) {
             hashCache = {};
             Object.entries(reader.roomIndex).forEach((room, index) => {
-                hashCache[room[1].hash] = index;
+                hashCache[room[1].hash] = room[1].id;
             })
         }
         return hashCache[matches[1]] ?? -1;
