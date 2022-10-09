@@ -1,3 +1,6 @@
+# 0.1.1
+- fix dependency
+
 # 0.1.0
 - add location search functions
 - fix no room handling
