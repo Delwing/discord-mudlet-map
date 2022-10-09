@@ -1,3 +1,7 @@
+# 0.1.0
+- add location search functions
+- fix no room handling
+
 # 0.0.7
 - fix map downloader - should prevent attempts to read map before stream finishes writes, thus failing to read map
 - move configuration loop into bot-configurator.js 

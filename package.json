@@ -18,14 +18,13 @@
   },
   "homepage": "https://github.com/Delwing/discord-mudlet-map#readme",
   "dependencies": {
-    "mudlet-map-binary-reader": "^0.1.2",
-    "mudlet-map-renderer": "^0.0.5",
+    "mudlet-map-binary-reader": "^0.6.0",
+    "mudlet-map-renderer": "^0.0.19",
     "sharp": "^0.30.5"
   },
   "peerDependencies": {
     "discord.js": ">12"
   },
-  "exports": "./exports.js",
   "devDependencies": {
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0"

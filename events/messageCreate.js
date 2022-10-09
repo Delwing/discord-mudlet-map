@@ -11,14 +11,18 @@ module.exports = (config) => {
     return async (message) => {
     Object.keys(config).forEach((key) => {
       let element = config[key];
-      let roomId = element.locationExtractor(message.content);
+      let reader = element.reader;
+      let roomId = element.locationExtractor(message.content, reader);
       if (roomId) {
-        let reader = element.reader;
         if (!reader) {
             message.channel.send(`${key} - map not ready`);  
             return;
         }
         let area = reader.getAreaByRoomId(roomId);
+        if (!area) {
+          message.channel.send(`${key} - no location ID`);
+          return;
+        }
         if (element.renderFragment) {
             area = area.limit(roomId, 15)
             if (element.settings == undefined) {
@@ -27,10 +31,6 @@ module.exports = (config) => {
             if (element.settings.areaName == undefined) {
                 element.settings.areaName = false;
             }
-        }
-        if (!area) {
-          message.channel.send(`${key} - no location ID`);
-          return;
         }
         async function render() {
           let renderer = new Renderer(null, reader, area, reader.getColors(), element.settings);
