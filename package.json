@@ -1,6 +1,6 @@
 {
   "name": "discord-mudlet-map",
-  "version": "0.1.3",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "keywords": [
