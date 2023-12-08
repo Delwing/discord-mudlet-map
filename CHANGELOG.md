@@ -1,3 +1,7 @@
+# 0.3.0
+- drop renderFragmentOption
+- add renderArea option
+
 # 0.2.0
 - add message creator configuration
 

@@ -14,6 +14,7 @@ module.exports = (config) => {
   return async (message) => {
     Object.keys(config).forEach((key) => {
       let element = config[key];
+      element.renderArea = element.renderArea ?? false;
       let reader = element.reader;
       let roomId = element.locationExtractor(message.content, reader);
       if (roomId) {
@@ -27,7 +28,7 @@ module.exports = (config) => {
           message.channel.send(`${key} - no location ID`);
           return;
         }
-        if (element.renderFragment) {
+        if (!element.renderArea) {
           area = area.limit(roomId, 15);
           if (element.settings == undefined) {
             element.settings = {};
@@ -45,7 +46,7 @@ module.exports = (config) => {
             element.settings
           );
           renderer.renderPosition(roomId);
-          sharp(Buffer.from(renderer.exportSvg(roomId, 10)))
+          sharp(Buffer.from(element.renderArea ? renderer.exportSvg() : renderer.exportSvg(roomId, 10)))
             .png()
             .toBuffer()
             .then((buffer) => {
