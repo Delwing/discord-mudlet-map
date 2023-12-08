@@ -16,6 +16,7 @@ let config = {
   Achaea: { 
     locationExtractor: LocationResolvers.plainRegexp("!achaea (\\d+)"),
     provider: MapProviders.retryingDownloader("https://raw.githubusercontent.com/IRE-Mudlet-Mapping/AchaeaCrowdmap/gh-pages/Map/map", { retries: 5, delay : 10000 }) },
+    messageCreator: (key, area, room) => `${key} - ${area.areaName} (${room.id})`,
     renderFragment: true, // renders just area around location, should improve generation times for bigger areas
     settings: {
       isRound: true
