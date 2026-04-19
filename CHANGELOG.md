@@ -1,3 +1,12 @@
+# 0.6.0
+- `provider` is now optional — entries without a provider operate in text-only mode (no map download, no rendering)
+- text-only entries must supply a `reader` (typically shared from another entry) and a `messageCreator`; the handler replies with the `messageCreator` return value as plain text
+- `configure()` now skips `prepareMap` for provider-less entries instead of crashing
+
+# 0.5.0
+- rewrite in TypeScript with ESM output
+- switch to konva-based mudlet-map-renderer
+
 # 0.3.0
 - drop renderFragmentOption
 - add renderArea option
